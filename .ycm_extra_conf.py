@@ -27,7 +27,6 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 # For more information, please refer to <http://unlicense.org/>
-
 from distutils.sysconfig import get_python_inc
 import platform
 import os.path as p
@@ -36,7 +35,7 @@ import ycm_core
 
 DIR_OF_THIS_SCRIPT = p.abspath( p.dirname( __file__ ) )
 DIR_OF_THIRD_PARTY = p.join( DIR_OF_THIS_SCRIPT, 'third_party' )
-SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
+SOURCE_EXTENSIONS = ['.py', '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
@@ -48,7 +47,7 @@ flags = [
 '-Wno-long-long',
 '-Wno-variadic-macros',
 '-fexceptions',
-'-DNDEBUG',
+'-DEBUG',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER and/or -DYCM_EXPORT in your flags;
 # only the YCM source code needs it.
 '-DUSE_CLANG_COMPLETER',
@@ -85,8 +84,12 @@ get_python_inc(),
 'cpp/ycm/tests/gmock/include',
 '-isystem',
 'cpp/ycm/benchmarks/benchmark/include',
+# personal: the project dir
 '-I',
 './',
+# personal: the extern library dir
+'-I',
+'/home/sins/externd/include',
 ]
 
 # Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,
@@ -182,7 +185,8 @@ def Settings( **kwargs ):
 
   if language == 'python':
     return {
-      'interpreter_path': PathToPythonUsedDuringBuild()
+    # personal: use this to set the target python
+      'interpreter_path': "/home/sins/anaconda3/envs/356/bin/python"
     }
 
   return {}
