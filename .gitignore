@@ -35,6 +35,9 @@
 build
 bin
 
+# vim editing 
+*.swp
+
 # qt generate
 moc_*
 ui_*
