@@ -42,3 +42,6 @@ bin
 moc_*
 ui_*
 
+# build
+build
+

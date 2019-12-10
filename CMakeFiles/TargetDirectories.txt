@@ -1,2 +1,0 @@
-/home/sins/workspace/Toy/CMakeFiles/edit_cache.dir
-/home/sins/workspace/Toy/CMakeFiles/rebuild_cache.dir
