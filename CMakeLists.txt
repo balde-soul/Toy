@@ -8,4 +8,5 @@ find_package(Boost REQUIRED regex filesystem)
 MESSAGE(${Boost_FOUND})
 
 # qt5 environment finder
+message($ENV)
 find_package()
