@@ -41,6 +41,7 @@ bin
 # qt generate
 moc_*
 ui_*
+!ui_util
 
 # build
 build*
