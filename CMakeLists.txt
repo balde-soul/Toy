@@ -7,4 +7,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/external ${CMAKE_MODULE_PATH})
 
 include(ProjectBase)
 
+add_subdirectory(function)
+
+add_subdirectory(function_solution)
+
+add_subdirectory(function_ui)
+
 add_subdirectory(core)

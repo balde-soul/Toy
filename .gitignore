@@ -45,3 +45,5 @@ ui_*
 
 # build
 build*
+
+.vscode
